@@ -64,8 +64,7 @@
     "projectVersion": "1.0.0",
     "projectRegion": "us-east-1",
     "platform": "AWS",
-    "platformRegions": {},
-    "lastSave": 1565858772886
+    "platformRegions": {}
   },
   "VCS_STATE": {
     "provider": "GitHub",
