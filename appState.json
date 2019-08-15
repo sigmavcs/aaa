@@ -1,21 +1,21 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "65356ff7-bcaa-4d9d-aedb-17e4ba2989ec": {
-        "id": "65356ff7-bcaa-4d9d-aedb-17e4ba2989ec",
+      "bd5a9928-2ab0-45b7-a902-769b2facc69f": {
+        "id": "bd5a9928-2ab0-45b7-a902-769b2facc69f",
         "parent": null,
         "name": "aaa",
         "type": "DIRECTORY",
         "isDirectory": true,
         "children": [
-          "49ff4231-b6af-4b18-b0fc-10064d7ea79a"
+          "06aa491e-2d05-41b4-a7f3-2fd464da31e9"
         ],
         "isRemovable": false,
         "filePath": "aaa"
       },
-      "49ff4231-b6af-4b18-b0fc-10064d7ea79a": {
-        "id": "49ff4231-b6af-4b18-b0fc-10064d7ea79a",
-        "parent": "65356ff7-bcaa-4d9d-aedb-17e4ba2989ec",
+      "06aa491e-2d05-41b4-a7f3-2fd464da31e9": {
+        "id": "06aa491e-2d05-41b4-a7f3-2fd464da31e9",
+        "parent": "bd5a9928-2ab0-45b7-a902-769b2facc69f",
         "name": "lambda.js",
         "type": "JS_LAMBDA",
         "isDirectory": false,
@@ -34,11 +34,11 @@
       }
     },
     "deletedFiles": [],
-    "rootNode": "65356ff7-bcaa-4d9d-aedb-17e4ba2989ec",
+    "rootNode": "bd5a9928-2ab0-45b7-a902-769b2facc69f",
     "openFiles": [
-      "49ff4231-b6af-4b18-b0fc-10064d7ea79a"
+      "06aa491e-2d05-41b4-a7f3-2fd464da31e9"
     ],
-    "currentFileId": "49ff4231-b6af-4b18-b0fc-10064d7ea79a",
+    "currentFileId": "06aa491e-2d05-41b4-a7f3-2fd464da31e9",
     "resources": {},
     "customTemplate": {
       "dialect": null,
@@ -64,8 +64,7 @@
     "projectVersion": "1.0.0",
     "projectRegion": "us-east-1",
     "platform": "AWS",
-    "platformRegions": {},
-    "lastSave": 1565852995697
+    "platformRegions": {}
   },
   "VCS_STATE": {
     "provider": "GitHub",
