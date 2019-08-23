@@ -48,34 +48,12 @@
       "apigusEast1APIapiany": {
         "name": "apigusEast1APIapiany",
         "type": "API_GATEWAY",
-        "config": {
-          "selectedRegion": "us-east-1",
-          "apiMode": 0,
-          "apiName": "API",
-          "endpointType": "EDGE",
-          "resourceMode": 0,
-          "resourceName": "api",
-          "resourcePath": "/api",
-          "restMethod": "ANY",
-          "proxyIntegration": false,
-          "enableCORS": false,
-          "stageMode": 0,
-          "stageName": "Dev",
-          "mode": 0
-        }
+        "config": "{\n    \"selectedRegion\": \"us-east-1\",\n    \"apiMode\": 0,\n    \"apiName\": \"API\",\n    \"endpointType\": \"EDGE\",\n    \"resourceMode\": 0,\n    \"resourceName\": \"api\",\n    \"resourcePath\": \"/api\",\n    \"restMethod\": \"ANY\",\n    \"proxyIntegration\": false,\n    \"enableCORS\": false,\n    \"stageMode\": 0,\n    \"stageName\": \"Test\",\n    \"mode\": 0\n}"
       },
       "snsusEast1Topic": {
         "name": "snsusEast1Topic",
         "type": "SNS",
-        "config": {
-          "topicMode": 0,
-          "topicName": "Topic",
-          "topicArn": "arn:aws:sns:us-east-1:318300609668:Topic",
-          "topicRegion": "us-east-1",
-          "snsType": 0,
-          "topicDisplayName": "Topic",
-          "subscriptions": []
-        }
+        "config": "{\n    \"topicMode\": 0,\n    \"topicName\": \"Topic\",\n    \"topicArn\": \"arn:aws:sns:us-east-1:318300609668:Topic\",\n    \"topicRegion\": \"us-east-1\",\n    \"snsType\": 0,\n    \"topicDisplayName\": \"Topic\",\n    \"subscriptions\": [\n        {\n            \"type\": \"http\",\n            \"endpoint\": \"http://a.com\"\n        }\n    ]\n}"
       }
     },
     "customTemplate": {
@@ -93,7 +71,15 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {}
+      "dependencies": {
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "javascript",
+          "version": "2.176.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
     }
   },
   "PROJECT_META": {
@@ -103,7 +89,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1566541919391
+    "lastSave": 1566544909539
   },
   "VCS_STATE": {
     "provider": "GitHub",
