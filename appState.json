@@ -9,7 +9,8 @@
         "isDirectory": true,
         "children": [
           "dfcc3584-e9ff-42f0-b663-3e404481b560",
-          "d60f1cc6-34e5-4eef-8bc3-7fa2b25285cf"
+          "d60f1cc6-34e5-4eef-8bc3-7fa2b25285cf",
+          "dcaac8ac-fc8e-4a3f-be9b-ad17fb4cfa47"
         ],
         "isRemovable": false,
         "filePath": "aaa"
@@ -23,7 +24,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "aaa/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst sns = new AWS.SNS();\n\nexports.handler = function (event, context, callback) {\n    sns.publish({\n        Message: 'Message',\n        Subject: 'Subject',\n        MessageAttributes: {},\n        MessageStructure: 'String',\n        TopicArn: 'arn:aws:sns:us-east-1:318300609668:Topic'\n    }).promise()\n        .then(data => {\n            // your code goes here\n        })\n        .catch(err => {\n            // error handling goes here\n        });\n\n    callback(null, { \"message\": \"Successfully executed!!\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst sns = new AWS.SNS();\n\nexports.handler = function (event, context, callback) {\n    sns.publish({\n        Message: 'Message',\n        Subject: 'Subject',\n        MessageAttributes: {},\n        MessageStructure: 'String',\n        TopicArn: 'arn:aws:sns:us-east-1:318300609668:Topic'\n    }).promise()\n        .then(data => {\n            // your code goes here\n        })\n        .catch(err => {\n            // error handling goes here\n        });\n\n    callback(null, { \"message\": \"Successfully executed...\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -47,13 +48,25 @@
         "children": [],
         "isRemovable": true,
         "filePath": "aaa/ch.js",
-        "code": "console.log(\"hello!\");"
+        "code": "console.log(\"hello\");"
+      },
+      "dcaac8ac-fc8e-4a3f-be9b-ad17fb4cfa47": {
+        "id": "dcaac8ac-fc8e-4a3f-be9b-ad17fb4cfa47",
+        "parent": "535bf4a0-78cd-409c-8002-ec2b366aad7e",
+        "name": "a.json",
+        "type": "JSON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "aaa/a.json",
+        "code": ""
       }
     },
     "deletedFiles": [],
     "rootNode": "535bf4a0-78cd-409c-8002-ec2b366aad7e",
     "openFiles": [
-      "dfcc3584-e9ff-42f0-b663-3e404481b560"
+      "dfcc3584-e9ff-42f0-b663-3e404481b560",
+      "d60f1cc6-34e5-4eef-8bc3-7fa2b25285cf"
     ],
     "currentFileId": "dfcc3584-e9ff-42f0-b663-3e404481b560",
     "resources": {
@@ -117,6 +130,11 @@
           "version": "2.176.0",
           "dev": true,
           "notRemovable": false
+        },
+        "lodash": {
+          "name": "lodash",
+          "version": "4.17.15",
+          "language": "javascript"
         }
       }
     }
