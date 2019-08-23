@@ -60,7 +60,7 @@
           "proxyIntegration": false,
           "enableCORS": false,
           "stageMode": 0,
-          "stageName": "Dev",
+          "stageName": "Test",
           "mode": 0
         }
       },
@@ -74,7 +74,12 @@
           "topicRegion": "us-east-1",
           "snsType": 0,
           "topicDisplayName": "Topic",
-          "subscriptions": []
+          "subscriptions": [
+            {
+              "type": "http",
+              "endpoint": "http://a.com"
+            }
+          ]
         }
       }
     },
