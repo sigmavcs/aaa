@@ -47,16 +47,15 @@
         "children": [],
         "isRemovable": true,
         "filePath": "aaa/ch.js",
-        "code": "console.log(\"hello\");"
+        "code": "console.log(\"hello!\");"
       }
     },
     "deletedFiles": [],
     "rootNode": "535bf4a0-78cd-409c-8002-ec2b366aad7e",
     "openFiles": [
-      "dfcc3584-e9ff-42f0-b663-3e404481b560",
-      "d60f1cc6-34e5-4eef-8bc3-7fa2b25285cf"
+      "dfcc3584-e9ff-42f0-b663-3e404481b560"
     ],
-    "currentFileId": "d60f1cc6-34e5-4eef-8bc3-7fa2b25285cf",
+    "currentFileId": "dfcc3584-e9ff-42f0-b663-3e404481b560",
     "resources": {
       "apigusEast1APIapiany": {
         "name": "apigusEast1APIapiany",
@@ -129,7 +128,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1566545383660
+    "lastSave": 1566550053320
   },
   "VCS_STATE": {
     "provider": "GitHub",
