@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "aaa/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst sns = new AWS.SNS();\n\nexports.handler = function (event, context, callback) {\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst sns = new AWS.SNS();\n\nexports.handler = function (event, context, callback) {\n    sns.publish({\n        Message: 'Message',\n        Subject: 'Subject',\n        MessageAttributes: {},\n        MessageStructure: 'String',\n        TopicArn: 'arn:aws:sns:us-east-1:318300609668:Topic'\n    }).promise()\n        .then(data => {\n            // your code goes here\n        })\n        .catch(err => {\n            // error handling goes here\n        });\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -30,7 +30,12 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": []
+        "triggers": [
+          {
+            "resourceName": "apigusEast1APIapiany",
+            "config": {}
+          }
+        ]
       }
     },
     "deletedFiles": [],
@@ -43,12 +48,34 @@
       "apigusEast1APIapiany": {
         "name": "apigusEast1APIapiany",
         "type": "API_GATEWAY",
-        "config": "{\n    \"selectedRegion\": \"us-east-1\",\n    \"apiMode\": 0,\n    \"apiName\": \"API\",\n    \"endpointType\": \"EDGE\",\n    \"resourceMode\": 0,\n    \"resourceName\": \"api\",\n    \"resourcePath\": \"/api\",\n    \"restMethod\": \"ANY\",\n    \"proxyIntegration\": false,\n    \"enableCORS\": false,\n    \"stageMode\": 0,\n    \"stageName\": \"Test\",\n    \"mode\": 0\n}"
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "API",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "api",
+          "resourcePath": "/api",
+          "restMethod": "ANY",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "Dev",
+          "mode": 0
+        }
       },
       "snsusEast1Topic": {
         "name": "snsusEast1Topic",
         "type": "SNS",
-        "config": "{\n    \"topicMode\": 0,\n    \"topicName\": \"Topic\",\n    \"topicArn\": \"arn:aws:sns:us-east-1:318300609668:Topic\",\n    \"topicRegion\": \"us-east-1\",\n    \"snsType\": 0,\n    \"topicDisplayName\": \"Topic\",\n    \"subscriptions\": [\n        {\n            \"type\": \"http\",\n            \"endpoint\": \"http://a.com\"\n        }\n    ]\n}"
+        "config": {
+          "topicMode": 0,
+          "topicName": "Topic",
+          "topicArn": "arn:aws:sns:us-east-1:318300609668:Topic",
+          "topicRegion": "us-east-1",
+          "snsType": 0,
+          "topicDisplayName": "Topic",
+          "subscriptions": []
+        }
       }
     },
     "customTemplate": {
