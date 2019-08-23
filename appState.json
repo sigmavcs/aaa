@@ -30,7 +30,12 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": []
+        "triggers": [
+          {
+            "resourceName": "apigusEast1APIapiany",
+            "config": {}
+          }
+        ]
       }
     },
     "deletedFiles": [],
@@ -39,7 +44,27 @@
       "dfcc3584-e9ff-42f0-b663-3e404481b560"
     ],
     "currentFileId": "dfcc3584-e9ff-42f0-b663-3e404481b560",
-    "resources": {},
+    "resources": {
+      "apigusEast1APIapiany": {
+        "name": "apigusEast1APIapiany",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "API",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "api",
+          "resourcePath": "/api",
+          "restMethod": "ANY",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "Dev",
+          "mode": 0
+        }
+      }
+    },
     "customTemplate": {
       "dialect": null,
       "definitions": null
@@ -64,7 +89,8 @@
     "projectVersion": "1.0.0",
     "projectRegion": "us-east-1",
     "platform": "AWS",
-    "platformRegions": {}
+    "platformRegions": {},
+    "lastSave": 1566539724162
   },
   "VCS_STATE": {
     "provider": "GitHub",
