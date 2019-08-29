@@ -70,6 +70,7 @@
   "VCS_STATE": {
     "provider": "GitHub",
     "repo": {
+      "name": "aaa",
       "url": "https://github.com/sigmavcs/aaa"
     }
   }
