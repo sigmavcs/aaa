@@ -1,30 +1,28 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "535bf4a0-78cd-409c-8002-ec2b366aad7e": {
-        "id": "535bf4a0-78cd-409c-8002-ec2b366aad7e",
+      "caa04f5d-bd2b-49f4-aabe-27d39302c08d": {
+        "id": "caa04f5d-bd2b-49f4-aabe-27d39302c08d",
         "parent": null,
         "name": "aaa",
         "type": "DIRECTORY",
         "isDirectory": true,
         "children": [
-          "dfcc3584-e9ff-42f0-b663-3e404481b560",
-          "d60f1cc6-34e5-4eef-8bc3-7fa2b25285cf",
-          "dcaac8ac-fc8e-4a3f-be9b-ad17fb4cfa47"
+          "eab9954d-3d05-4f59-b2c8-da9bc23a70e7"
         ],
         "isRemovable": false,
         "filePath": "aaa"
       },
-      "dfcc3584-e9ff-42f0-b663-3e404481b560": {
-        "id": "dfcc3584-e9ff-42f0-b663-3e404481b560",
-        "parent": "535bf4a0-78cd-409c-8002-ec2b366aad7e",
+      "eab9954d-3d05-4f59-b2c8-da9bc23a70e7": {
+        "id": "eab9954d-3d05-4f59-b2c8-da9bc23a70e7",
+        "parent": "caa04f5d-bd2b-49f4-aabe-27d39302c08d",
         "name": "lambda.js",
         "type": "JS_LAMBDA",
         "isDirectory": false,
         "children": [],
         "isRemovable": true,
         "filePath": "aaa/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst sns = new AWS.SNS();\n\nexports.handler = function (event, context, callback) {\n    sns.publish({\n        Message: 'Message',\n        Subject: 'Subject',\n        MessageAttributes: {},\n        MessageStructure: 'String',\n        TopicArn: 'arn:aws:sns:us-east-1:318300609668:Topic'\n    }).promise()\n        .then(data => {\n            // your code goes here\n        })\n        .catch(err => {\n            // error handling goes here\n        });\n\n    callback(null, { \"message\": \"Successfully executed...\" });\n}",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -32,82 +30,16 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": [
-          {
-            "resourceName": "apigusEast1APIapiany",
-            "config": {}
-          }
-        ]
-      },
-      "d60f1cc6-34e5-4eef-8bc3-7fa2b25285cf": {
-        "id": "d60f1cc6-34e5-4eef-8bc3-7fa2b25285cf",
-        "parent": "535bf4a0-78cd-409c-8002-ec2b366aad7e",
-        "name": "ch.js",
-        "type": "JS_FILE",
-        "isDirectory": false,
-        "children": [],
-        "isRemovable": true,
-        "filePath": "aaa/ch.js",
-        "code": "console.log(\"hello\");"
-      },
-      "dcaac8ac-fc8e-4a3f-be9b-ad17fb4cfa47": {
-        "id": "dcaac8ac-fc8e-4a3f-be9b-ad17fb4cfa47",
-        "parent": "535bf4a0-78cd-409c-8002-ec2b366aad7e",
-        "name": "a.json",
-        "type": "JSON_FILE",
-        "isDirectory": false,
-        "children": [],
-        "isRemovable": true,
-        "filePath": "aaa/a.json",
-        "code": ""
+        "triggers": []
       }
     },
     "deletedFiles": [],
-    "rootNode": "535bf4a0-78cd-409c-8002-ec2b366aad7e",
+    "rootNode": "caa04f5d-bd2b-49f4-aabe-27d39302c08d",
     "openFiles": [
-      "dfcc3584-e9ff-42f0-b663-3e404481b560",
-      "d60f1cc6-34e5-4eef-8bc3-7fa2b25285cf"
+      "eab9954d-3d05-4f59-b2c8-da9bc23a70e7"
     ],
-    "currentFileId": "dfcc3584-e9ff-42f0-b663-3e404481b560",
-    "resources": {
-      "apigusEast1APIapiany": {
-        "name": "apigusEast1APIapiany",
-        "type": "API_GATEWAY",
-        "config": {
-          "selectedRegion": "us-east-1",
-          "apiMode": 0,
-          "apiName": "API",
-          "endpointType": "EDGE",
-          "resourceMode": 0,
-          "resourceName": "api",
-          "resourcePath": "/api",
-          "restMethod": "ANY",
-          "proxyIntegration": false,
-          "enableCORS": false,
-          "stageMode": 0,
-          "stageName": "Test",
-          "mode": 0
-        }
-      },
-      "snsusEast1Topic": {
-        "name": "snsusEast1Topic",
-        "type": "SNS",
-        "config": {
-          "topicMode": 0,
-          "topicName": "Topic",
-          "topicArn": "arn:aws:sns:us-east-1:318300609668:Topic",
-          "topicRegion": "us-east-1",
-          "snsType": 0,
-          "topicDisplayName": "Topic",
-          "subscriptions": [
-            {
-              "type": "http",
-              "endpoint": "http://a.com"
-            }
-          ]
-        }
-      }
-    },
+    "currentFileId": "eab9954d-3d05-4f59-b2c8-da9bc23a70e7",
+    "resources": {},
     "customTemplate": {
       "dialect": null,
       "definitions": null
@@ -123,20 +55,7 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {
-        "aws-sdk": {
-          "name": "aws-sdk",
-          "language": "javascript",
-          "version": "2.176.0",
-          "dev": true,
-          "notRemovable": false
-        },
-        "lodash": {
-          "name": "lodash",
-          "version": "4.17.15",
-          "language": "javascript"
-        }
-      }
+      "dependencies": {}
     }
   },
   "PROJECT_META": {
@@ -145,8 +64,7 @@
     "projectVersion": "1.0.0",
     "projectRegion": "us-east-1",
     "platform": "AWS",
-    "platformRegions": {},
-    "lastSave": 1566550053320
+    "platformRegions": {}
   },
   "VCS_STATE": {
     "provider": "GitHub",
