@@ -64,12 +64,12 @@
     "projectVersion": "1.0.0",
     "projectRegion": "us-east-1",
     "platform": "AWS",
-    "platformRegions": {}
+    "platformRegions": {},
+    "lastSave": 1567074792340
   },
   "VCS_STATE": {
     "provider": "GitHub",
     "repo": {
-      "name": "aaa",
       "url": "https://github.com/sigmavcs/aaa"
     }
   }
